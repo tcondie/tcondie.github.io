@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HotCloud timer</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.time-warning.warning-marker {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  width: .25em;
+  background: #f0ad4e;
+}
+
+.time-warning.warning-label {
+  position: absolute;
+  top: 100%;
+  font-size: 200%;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container" style="max-width: 50em">
+      <p class="text-center noselect" style="font-size:800%; cursor:pointer" id="timer">&nbsp;</p>
+
+      <div style="width:100%; height: 2em; margin-bottom:3em; background: #eee; position:relative; cursor:pointer" id="bar">
+        <div style="height:100%; position:absolute; top:0px; left:0px; width:0%; background:#5bc0de" id="progress"></div>
+
+        <div style="height:100%; position:absolute; top:0px; right:0; width:.25em; background:#d9534f"></div>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%; height: 4em" type="submit" id="pause">Resume</button>
+
+      <p style="margin-top: 10em">
+        <div style="width:50%; display:inline-block; padding-right: .5em">
+          <button class="btn btn-default btn-danger" style="width:100%" type="submit" id="reset-talk">Start for talk</button>
+        </div
+        ><div style="width:50%; display:inline-block; padding-left: .5em">
+          <button class="btn btn-default btn-danger" style="width:100%" type="submit" id="reset-discuss">Start for discussion</button>
+        </div>
+      </p>
+      <p>
+        <button class="btn btn-default btn-info center-block" style="width:50%" type="submit" id="test-ding">Test ding</button>
+      </p>
+
+      <p class="text-center">Click timer to start/pause.<br />
+      Click progress bar to adjust time left.</p>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
